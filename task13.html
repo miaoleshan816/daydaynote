@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task13</title>
+</head>
+<body>
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button" onclick="inputOne()">确认填写</button>
+
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+<!--这里遇到一个问题，就是使用shuru.valueof()进行输出的时候，出现了错误，反回了[object HTMLInputElement],只有使用value才能得到正确的结果-->
+<script type="text/javascript">
+    var shuru=document.getElementById("aqi-input");
+    var xianshi=document.getElementById("aqi-display");
+    function inputOne(){
+        if(shuru.value){
+            xianshi.innerHTML=shuru.value;
+        }
+    }
+</script>
+</body>
+</html>
